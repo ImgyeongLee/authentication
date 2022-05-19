@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Authentication</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/2441406a2d.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+		{% extends "base.html" %}
+		{% block body %}
+		<main class="main-section">
+			<h1><i class="fa-solid fa-user-lock"></i> Sign up</h1>
+
+      <fieldset class="format" id="sign-up">
+        <legend class="format-label">Create a new account!</legend>
+				<form method="POST">
+					<div>
+	          <label for="Firstname">First Name</label>
+	        	<input type="textarea" name="Firstname" class="input-box">
+	          <label for="Lastname">Last Name</label>
+	        	<input type="textarea" name="Lastname" class="input-box">
+	          <label for="Username">Username</label>
+	        	<input type="textarea" name="Username" class="input-box">
+	        	<label for="Password">Password</label>
+	  				<input type="textarea" name="Password" class="input-box">
+	          <label for="PWDChecker">Verify Password</label>
+	  				<input type="textarea" name="PWDChecker" class="input-box">
+	          <label for="Email">Email</label>
+	  				<input type="email" name="Email" class="input-box">
+	      	</div>
+					<p class="button-container"><button type="submit" class="modal-button">Register</button>
+				</form>
+        <p class="desc-option"><a href="/">Go back</a></p>
+  		</fieldset>
+		</main>
+		{% endblock %}
+	</body>
+</html>

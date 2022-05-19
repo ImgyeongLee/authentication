@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}Home{% endblock %}</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/2441406a2d.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+		{% extends "base.html" %}
+		{% block body %}
+		<main class="main-section">
+			<h1><i class="fa-solid fa-user-lock"></i> Authentication</h1>
+
+      <fieldset class="format" id="sign-in">
+        <legend class="format-label">Sign in</legend>
+				<form method="POST">
+					<div>
+	          <label for="Username">Username</label>
+	        	<input type="textarea" name="Username" class="input-box">
+	        	<label for="Password">Password</label>
+	  				<input type="textarea" name="Password" class="input-box">
+	      	</div>
+  			<p class="button-container"><input type="submit" value="Sign in" class="modal-button"></p>
+				</form>
+        <p class="desc-option">Don't have an account? <a href="signup" class="create-new">Sign up!</a></p>
+  		</fieldset>
+		</main>
+		{% endblock %}
+	</body>
+</html>
